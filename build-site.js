@@ -539,12 +539,12 @@ function breadcrumbLd(items) {
 }
 
 function breadcrumbNav(items) {
-  return `<nav class="breadcrumb reveal" aria-label="Kruimelpad">
+  return `<div class="breadcrumb reveal" role="navigation" aria-label="Kruimelpad">
   ${items.map((it, i) => it.href
       ? `<a href="${it.href}">${it.label}</a><span class="crumb-sep">/</span>`
       : `<span aria-current="page">${it.label}</span>`
     ).join('\n  ')}
-</nav>`;
+</div>`;
 }
 
 function truncate(text, max) {

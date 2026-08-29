@@ -12,18 +12,32 @@ const SITE = {
   postcode: '2518 VP',
   city: 'Den Haag',
   kvk: '68490925',
+  ownerName: 'Elhadi',
 };
 
 const SERVICES = [
   {
     slug: 'lekkage-opsporen-en-verhelpen',
     icon: 'droplet',
+    related: ['afvoer-ontstoppen', 'waterleiding-aanleg-en-renovatie', 'spoedservice-loodgieter-24-uur'],
     nav: 'Lekkage verhelpen',
     h1: 'Lekkage opsporen en verhelpen',
     eyebrow: 'Lekkage · Den Haag',
     metaTitle: 'Lekkage opsporen Den Haag | Hadi Installatie',
     metaDescription: 'Vochtplek, natte muur of hoge waterrekening in Den Haag? Hadi Installatie spoort de lekkage op en verhelpt hem direct, met een vaste prijs vooraf.',
     lead: 'Een vochtplek op het plafond of een onverklaarbaar hoge waterrekening is meestal het eerste teken van een lekkage. Hoe eerder die wordt opgespoord, hoe minder schade. Hadi Installatie spoort het lek gericht op en lost het meteen op.',
+    about: {
+      title: 'Wat is een lekkage precies?',
+      paragraphs: [
+        'Een lekkage ontstaat meestal geleidelijk: een verbinding die na jaren is gaan lekken, een leiding die door vorst is gesprongen, of een dakdoorvoer die niet meer waterdicht is. Vaak merkt u het pas als er al schade is, terwijl het probleem zelf soms al weken sluimert achter een muur of onder een vloer.',
+        'Hoe langer een lekkage onopgemerkt blijft, hoe groter de kans op schimmel, aangetaste kozijnen en een oplopende waterrekening. Daarom is snel en gericht opsporen belangrijker dan wachten tot het probleem vanzelf zichtbaar wordt.',
+      ],
+      signals: [
+        'Vochtplekken op een muur, plafond of vloer',
+        'Muffe geur of beginnende schimmel in een hoek',
+        'Een waterrekening die opeens flink hoger uitvalt',
+      ],
+    },
     deliverables: [
       { t: 'Lekdetectie', d: 'Gericht zoeken naar de bron, zonder onnodig te breken of te boren.' },
       { t: 'Directe reparatie', d: 'Waar mogelijk wordt het lek dezelfde afspraak nog verholpen.' },
@@ -49,12 +63,25 @@ const SERVICES = [
   {
     slug: 'afvoer-ontstoppen',
     icon: 'drain',
+    related: ['riolering-en-rioolontstopping', 'lekkage-opsporen-en-verhelpen', 'keukeninstallatie'],
     nav: 'Afvoer ontstoppen',
     h1: 'Afvoer ontstoppen',
     eyebrow: 'Ontstopping · Den Haag',
     metaTitle: 'Afvoer ontstoppen Den Haag | Hadi Installatie',
     metaDescription: 'Verstopte gootsteen, douche of toilet in Den Haag? Hadi Installatie maakt de afvoer weer vrij, snel en zonder de boel open te breken.',
     lead: 'Een verstopte afvoer is vervelend en vaak op het slechtste moment. Hadi Installatie maakt gootsteen, douche, bad of toilet weer vrij, met de juiste techniek voor de verstopping.',
+    about: {
+      title: 'Hoe ontstaat een verstopping?',
+      paragraphs: [
+        'De meeste verstoppingen bouwen zich langzaam op. Vet dat afkoelt en aankoekt in de keukenafvoer, haren die zich verzamelen in het douche- of badputje, of wc-papier dat samenklontert in de leiding. Bij oudere aansluitingen op de buitenriolering kan ook worteldoorgroei een rol spelen.',
+        'Zelf aan de slag met chemische ontstoppers lost het probleem soms tijdelijk op, maar kan kunststof leidingen op termijn aantasten. Met de juiste veer of hogedrukapparatuur wordt de verstopping verwijderd zonder de leiding te beschadigen.',
+      ],
+      signals: [
+        'Water dat traag wegloopt uit gootsteen, douche of bad',
+        'Gorgelende geluiden uit de afvoer of het toilet',
+        'Een onaangename geur die uit de afvoer blijft komen',
+      ],
+    },
     deliverables: [
       { t: 'Ontstoppen op locatie', d: 'Met veer, hogedruk of ontstoppingsmiddel, afhankelijk van de situatie.' },
       { t: 'Oorzaak checken', d: 'We kijken of het een losstaand probleem is of vaker zal terugkomen.' },
@@ -80,12 +107,25 @@ const SERVICES = [
   {
     slug: 'cv-ketel-installatie-en-onderhoud',
     icon: 'flame',
+    related: ['boiler-en-warmwatertoestel', 'gasleiding-en-gasfitter', 'spoedservice-loodgieter-24-uur'],
     nav: 'CV-ketel',
     h1: 'CV-ketel installatie en onderhoud',
     eyebrow: 'CV-ketel · Den Haag',
     metaTitle: 'CV-ketel installatie en onderhoud Den Haag | Hadi Installatie',
     metaDescription: 'Nieuwe CV-ketel, storing of jaarlijks onderhoud in Den Haag. Hadi Installatie installeert en onderhoudt uw CV-ketel vakkundig.',
     lead: 'Een CV-ketel die het laat afweten betekent al snel een koud huis. Hadi Installatie installeert nieuwe ketels en houdt bestaande ketels met jaarlijks onderhoud betrouwbaar en veilig.',
+    about: {
+      title: 'Waarom onderhoud echt het verschil maakt',
+      paragraphs: [
+        'Een CV-ketel werkt het grootste deel van het jaar op de achtergrond, tot het moment dat hij ermee stopt, meestal op een koude avond. Jaarlijks onderhoud houdt de verbranding schoon en efficiënt, verkleint de kans op een onverwachte storing en is bovendien belangrijk voor de veiligheid: een slecht afgestelde ketel kan koolmonoxide vormen.',
+        'Bij een oudere ketel is niet elke storing de moeite van het repareren waard. Wij geven eerlijk aan wanneer een reparatie nog zin heeft, en wanneer een nieuwe ketel zich op termijn terugverdient in een lagere energierekening.',
+      ],
+      signals: [
+        'De ketel maakt tikkende of brommende geluiden',
+        'De waterdruk zakt steeds terug en moet vaak bijgevuld worden',
+        'Geen warm water of verwarming meer, of een foutcode op het display',
+      ],
+    },
     deliverables: [
       { t: 'Nieuwe ketel installeren', d: 'Advies over het juiste vermogen en vakkundige installatie.' },
       { t: 'Storing verhelpen', d: 'Foutcode of geen warm water? We sporen de oorzaak op en lossen het op.' },
@@ -111,12 +151,25 @@ const SERVICES = [
   {
     slug: 'sanitair-en-badkamer-installatie',
     icon: 'sink',
+    related: ['kraan-reparatie-en-vervanging', 'waterleiding-aanleg-en-renovatie', 'afvoer-ontstoppen'],
     nav: 'Badkamer & sanitair',
     h1: 'Sanitair en badkamer installatie',
     eyebrow: 'Sanitair · Den Haag',
     metaTitle: 'Badkamer en sanitair installatie Den Haag | Hadi Installatie',
     metaDescription: 'Nieuwe badkamer of sanitair laten installeren in Den Haag? Hadi Installatie sluit toilet, douche, bad en wastafel vakkundig aan.',
     lead: 'Van een enkele wastafel tot een complete badkamer: Hadi Installatie sluit sanitair vakkundig aan, met oog voor een net, lekvrij eindresultaat.',
+    about: {
+      title: 'Waar het op aankomt bij een nieuwe badkamer',
+      paragraphs: [
+        'Een badkamer of los stuk sanitair staat of valt met wat er achter de tegels gebeurt. Water- en afvoerleidingen moeten op de juiste plek zitten, met voldoende afschot, voordat er ook maar één tegel wordt gezet. Fouten in deze fase zijn later nauwelijks meer te herstellen zonder alles open te breken.',
+        'Werkt u al met een tegelzetter of aannemer? Dan stemmen we de planning en het leidingwerk graag met hen af, zodat de klus in de juiste volgorde en zonder vertraging verloopt.',
+      ],
+      signals: [
+        'Denk vooraf na over de gewenste indeling en aansluitpunten',
+        'Kies het sanitair (toilet, douche, bad, wastafel) liefst voor de start',
+        'Bepaal een realistisch budget, inclusief eventueel leidingwerk',
+      ],
+    },
     deliverables: [
       { t: 'Toilet, douche & bad', d: 'Aansluiten of vervangen van sanitair naar wens.' },
       { t: 'Wastafels & kranen', d: 'Nieuwe wastafel of meubel waterdicht en stevig aangesloten.' },
@@ -142,12 +195,25 @@ const SERVICES = [
   {
     slug: 'kraan-reparatie-en-vervanging',
     icon: 'wrench',
+    related: ['sanitair-en-badkamer-installatie', 'keukeninstallatie', 'lekkage-opsporen-en-verhelpen'],
     nav: 'Kraan reparatie',
     h1: 'Kraan reparatie en vervanging',
     eyebrow: 'Kranen · Den Haag',
     metaTitle: 'Kraan reparatie en vervanging Den Haag | Hadi Installatie',
     metaDescription: 'Druppende of lekkende kraan in Den Haag? Hadi Installatie repareert of vervangt uw kraan snel en vakkundig.',
     lead: 'Een druppende kraan is niet alleen vervelend, het kost ook onnodig water. Hadi Installatie repareert of vervangt keuken- en badkamerkranen snel en netjes.',
+    about: {
+      title: 'Waarom een kraan gaat druppelen',
+      paragraphs: [
+        'Meestal zit de oorzaak in een versleten kraanleertje of cartridge, onderdelen die simpelweg slijten door dagelijks gebruik. Kalkaanslag versnelt dat proces, zeker in gebieden met hard water. Een druppende kraan lijkt onschuldig, maar kan over een jaar al snel voor honderden liters verspild water zorgen.',
+        'Niet elke kraan is de moeite van het repareren waard. Bij een kraan ouder dan tien tot vijftien jaar is vervangen vaak voordeliger dan telkens nieuwe onderdelen laten plaatsen, wij adviseren daar eerlijk over.',
+      ],
+      signals: [
+        'De kraan blijft druppelen, ook als hij goed dicht is gedraaid',
+        'De kraan is zwaar of moeilijk dicht te draaien',
+        'Zichtbare kalkaanslag rond de uitloop of hendel',
+      ],
+    },
     deliverables: [
       { t: 'Kraan repareren', d: 'Vaak volstaat een nieuwe kraanleertje of cartridge.' },
       { t: 'Kraan vervangen', d: 'Advies en montage van een nieuwe kraan naar keuze.' },
@@ -173,12 +239,25 @@ const SERVICES = [
   {
     slug: 'waterleiding-aanleg-en-renovatie',
     icon: 'pipe',
+    related: ['lekkage-opsporen-en-verhelpen', 'sanitair-en-badkamer-installatie', 'keukeninstallatie'],
     nav: 'Waterleiding',
     h1: 'Waterleiding aanleg en renovatie',
     eyebrow: 'Waterleiding · Den Haag',
     metaTitle: 'Waterleiding aanleggen of vernieuwen Den Haag | Hadi Installatie',
     metaDescription: 'Nieuwe waterleiding of oude leidingen vervangen in Den Haag. Hadi Installatie legt waterleidingen vakkundig aan, ook bij renovatie.',
     lead: 'Bij een verbouwing of oude leidingen die aan vervanging toe zijn, legt Hadi Installatie nieuwe waterleidingen aan of vernieuwt bestaande leidingen.',
+    about: {
+      title: 'Wanneer leidingen aan vervanging toe zijn',
+      paragraphs: [
+        'Woningen van voor de jaren 60 hebben soms nog (deels) loden of verouderde stalen leidingen. Die zijn niet alleen gevoelig voor lekkage, maar bij loden leidingen speelt ook een gezondheidsrisico. Corrosie aan de binnenkant van oude leidingen zorgt bovendien voor een geleidelijk afnemende waterdruk.',
+        'Bij nieuwe aanleg, bijvoorbeeld voor een aanbouw of verbouwing, testen we elke leiding met een drukproef voor de wanden weer dicht gaan. Zo weet u zeker dat alles dicht is voordat het onzichtbaar wordt weggewerkt.',
+      ],
+      signals: [
+        'Bruin of troebel water bij het opendraaien van de kraan',
+        'Merkbaar lagere waterdruk dan voorheen',
+        'Zichtbare roest of groene aanslag op zichtbaar leidingwerk',
+      ],
+    },
     deliverables: [
       { t: 'Nieuwe aanleg', d: 'Waterleidingen voor een verbouwing, aanbouw of nieuwe aansluiting.' },
       { t: 'Oude leidingen vervangen', d: 'Vervangen van verouderd of lekgevoelig leidingwerk.' },
@@ -204,12 +283,25 @@ const SERVICES = [
   {
     slug: 'riolering-en-rioolontstopping',
     icon: 'sewer',
+    related: ['afvoer-ontstoppen', 'spoedservice-loodgieter-24-uur', 'lekkage-opsporen-en-verhelpen'],
     nav: 'Riolering',
     h1: 'Riolering en rioolontstopping',
     eyebrow: 'Riolering · Den Haag',
     metaTitle: 'Riolering en rioolontstopping Den Haag | Hadi Installatie',
     metaDescription: 'Verstopt riool of rioolproblemen in Den Haag? Hadi Installatie lost rioolverstoppingen op en repareert of vervangt rioolleidingen.',
     lead: 'Een verstopt riool of stinkende afvoer wijst vaak op een probleem dieper in de leiding. Hadi Installatie spoort het op en lost het vakkundig op.',
+    about: {
+      title: 'Wat er achter een rioolprobleem schuilgaat',
+      paragraphs: [
+        'Waar een verstopte afvoer meestal een lokaal probleem is, ligt de oorzaak bij rioolklachten vaak dieper: een verzakte leiding, doorgroeiende boomwortels bij oudere aansluitingen, of een opeenstapeling van vet en vuil over jaren tijd. Dat merkt u meestal pas als meerdere afvoerpunten in huis tegelijk traag worden.',
+        'Bij hardnekkige of terugkerende problemen zetten we een camera in om precies te zien wat er aan de hand is, in plaats van te gokken. Zo repareren we wat er daadwerkelijk kapot is, niet meer en niet minder.',
+      ],
+      signals: [
+        'Aanhoudende stankoverlast, ook na het schoonmaken van de afvoer',
+        'Water dat terugstroomt in het laagst gelegen putje of toilet',
+        'Meerdere afvoerpunten in huis die tegelijk traag worden',
+      ],
+    },
     deliverables: [
       { t: 'Rioolontstopping', d: 'Met professionele apparatuur maken we het riool weer vrij.' },
       { t: 'Camera-inspectie', d: 'Waar nodig bekijken we de leiding van binnen om de oorzaak te vinden.' },
@@ -235,12 +327,25 @@ const SERVICES = [
   {
     slug: 'spoedservice-loodgieter-24-uur',
     icon: 'bolt',
+    related: ['lekkage-opsporen-en-verhelpen', 'cv-ketel-installatie-en-onderhoud', 'afvoer-ontstoppen'],
     nav: 'Spoedservice',
     h1: 'Spoedservice loodgieter',
     eyebrow: 'Spoed · Den Haag',
     metaTitle: 'Spoed loodgieter Den Haag | Hadi Installatie',
     metaDescription: 'Grote lekkage, verstopping of geen warm water in Den Haag? Bel Hadi Installatie voor spoedservice, vaak binnen twee uur ter plekke.',
     lead: 'Een grote lekkage of een kapotte CV-ketel in de winter wacht niet tot morgen. Bel direct: bij spoed staat Hadi Installatie vaak binnen twee uur voor de deur in Den Haag en omgeving.',
+    about: {
+      title: 'Wat telt echt als spoed?',
+      paragraphs: [
+        'Niet elk probleem is spoed, en dat is maar goed ook: spoedtarieven zijn hoger dan een regulier bezoek. Een grote lekkage die water blijft verliezen, een CV-ketel die er in de winter mee stopt, of een verstopt toilet als dat de enige toiletruimte in huis is, dat zijn situaties die niet tot morgen kunnen wachten.',
+        'Twijfelt u of het spoed is? Bel gewoon. Aan de telefoon schatten we samen met u in hoe dringend het is, en geven we praktisch advies voor de eerste minuten, ook als we nog onderweg zijn.',
+      ],
+      signals: [
+        'Een lekkage die actief water blijft verliezen',
+        'Geen verwarming of warm water tijdens koud weer',
+        'De enige toiletruimte in huis is volledig verstopt',
+      ],
+    },
     deliverables: [
       { t: 'Snelle respons', d: 'Bij spoed schakelen we zo snel mogelijk, vaak binnen twee uur.' },
       { t: 'Lekkages stoppen', d: 'Eerst de schade beperken, daarna een structurele oplossing.' },
@@ -266,12 +371,25 @@ const SERVICES = [
   {
     slug: 'boiler-en-warmwatertoestel',
     icon: 'boiler',
+    related: ['cv-ketel-installatie-en-onderhoud', 'gasleiding-en-gasfitter', 'kraan-reparatie-en-vervanging'],
     nav: 'Boiler & warmwater',
     h1: 'Boiler en warmwatertoestel',
     eyebrow: 'Warm water · Den Haag',
     metaTitle: 'Boiler en warmwatertoestel Den Haag | Hadi Installatie',
     metaDescription: 'Geen warm water in Den Haag? Hadi Installatie installeert en repareert boilers en warmwatertoestellen.',
     lead: 'Geen warm water is al snel een dagelijks ongemak. Hadi Installatie installeert nieuwe boilers en warmwatertoestellen en repareert bestaande toestellen.',
+    about: {
+      title: 'Boiler, geiser of warm water via de CV?',
+      paragraphs: [
+        'Er zijn meerdere manieren om aan warm water te komen: een losse boiler, een geiser, of warm water via de CV-ketel. Welke optie het voordeligst is, hangt af van uw verbruik, het aantal badkamers en hoe uw woning is aangesloten. Een verkeerde keuze merkt u meestal pas terug in een hoge energierekening of te weinig capaciteit op drukke momenten.',
+        'Bij een toestel dat lang stilstaat, bijvoorbeeld in een vakantiewoning, is periodiek doorspoelen ook een aandachtspunt vanwege het risico op legionella. Bij onderhoud nemen we dat gelijk mee.',
+      ],
+      signals: [
+        'Water dat lauw blijft in plaats van goed warm te worden',
+        'Vreemde geluiden uit het toestel tijdens het opwarmen',
+        'Zichtbare lekkage bij of onder de boiler',
+      ],
+    },
     deliverables: [
       { t: 'Nieuwe boiler plaatsen', d: 'Advies over het juiste type en vakkundige installatie.' },
       { t: 'Reparatie', d: 'Geen of te weinig warm water? We sporen de oorzaak op.' },
@@ -297,12 +415,25 @@ const SERVICES = [
   {
     slug: 'keukeninstallatie',
     icon: 'kitchen',
+    related: ['kraan-reparatie-en-vervanging', 'waterleiding-aanleg-en-renovatie', 'afvoer-ontstoppen'],
     nav: 'Keukeninstallatie',
     h1: 'Keukeninstallatie',
     eyebrow: 'Keuken · Den Haag',
     metaTitle: 'Keuken aansluiten Den Haag | Hadi Installatie',
     metaDescription: 'Nieuwe keuken laten aansluiten in Den Haag? Hadi Installatie sluit kraan, vaatwasser en wasmachine vakkundig aan.',
     lead: 'Een nieuwe keuken is pas compleet als alles goed is aangesloten. Hadi Installatie sluit keukenkraan, vaatwasser, wasmachine en afvoer vakkundig aan.',
+    about: {
+      title: 'Waar u vooraf op kunt letten',
+      paragraphs: [
+        'Een nieuwe keuken staat er vaak snel, maar de aansluiting bepaalt of alles ook goed blijft functioneren. De afvoer moet op de juiste plek en met voldoende afschot liggen, de kraanaansluiting moet waterdicht zijn, en apparatuur zoals een vaatwasser heeft specifieke eisen aan water en afvoer.',
+        'Werkt u met een keukenzaak? Dan stemmen we de planning graag met hen af, zodat de installatie aansluit op het moment dat de keuken wordt geplaatst.',
+      ],
+      signals: [
+        'Check vooraf of aansluitpunten op de juiste plek zitten',
+        'Controleer of er voldoende stopcontacten in de buurt zijn',
+        'Bepaal of de bestaande afvoer geschikt is voor de nieuwe apparatuur',
+      ],
+    },
     deliverables: [
       { t: 'Keukenkraan aansluiten', d: 'Waterdicht en stevig gemonteerd, inclusief eventuele filterkraan.' },
       { t: 'Vaatwasser & wasmachine', d: 'Aansluiten op water en afvoer volgens de eisen van het toestel.' },
@@ -328,12 +459,25 @@ const SERVICES = [
   {
     slug: 'gasleiding-en-gasfitter',
     icon: 'gas',
+    related: ['cv-ketel-installatie-en-onderhoud', 'boiler-en-warmwatertoestel', 'keukeninstallatie'],
     nav: 'Gasleiding',
     h1: 'Gasleiding en gasfitterswerk',
     eyebrow: 'Gasfitter · Den Haag',
     metaTitle: 'Gasfitter en gasleiding Den Haag | Hadi Installatie',
     metaDescription: 'Gasleiding aanleggen, verplaatsen of keuren in Den Haag. Hadi Installatie voert gasfitterswerk veilig en volgens de norm uit.',
     lead: 'Gaswerkzaamheden vragen om precisie en veiligheid. Hadi Installatie legt gasleidingen aan, verplaatst aansluitpunten en controleert bestaande leidingen.',
+    about: {
+      title: 'Waarom gaswerk geen doe-het-zelfklus is',
+      paragraphs: [
+        'Bij gasleidingen is de marge voor fouten klein. Een niet volledig dichte koppeling is vaak niet direct merkbaar, maar wel gevaarlijk. Daarom werken we volgens de geldende veiligheidsnormen en controleren we elke aansluiting met een dichtheidscontrole voor we een leiding als klaar beschouwen.',
+        'Bij een verbouwing of nieuwe keuken verplaatsen we het gasaansluitpunt mee, altijd in overleg over waar het toestel uiteindelijk komt te staan.',
+      ],
+      signals: [
+        'Een (zwakke) gaslucht, ook als u twijfelt of het inbeelding is',
+        'Een gasfornuis dat ongelijkmatig of met een gele vlam brandt',
+        'Zichtbaar oude of roestige gasleidingen',
+      ],
+    },
     deliverables: [
       { t: 'Gasleiding aanleggen', d: 'Voor een kookplaat, gasfornuis of ander gastoestel.' },
       { t: 'Aansluitpunt verplaatsen', d: 'Bij een verbouwing verplaatsen we het gasaansluitpunt mee.' },
@@ -359,28 +503,49 @@ const SERVICES = [
 ];
 
 const AREAS = [
-  { slug: 'den-haag-centrum', name: 'Den Haag Centrum', region: 'Den Haag', blurb: 'Van het Zeeheldenkwartier tot de Grote Markt: in Den Haag Centrum wonen en werken mensen in een mix van historische panden en moderne appartementen. Smalle straten en oudere leidingen vragen soms om extra vakmanschap.' },
-  { slug: 'scheveningen', name: 'Scheveningen', region: 'Den Haag', blurb: 'Scheveningen is de kustplaats van Den Haag, met veel woningen die dicht bij zee staan. Zilte lucht is niet altijd vriendelijk voor leidingwerk en kranen, waardoor onderhoud en tijdige reparatie extra belangrijk zijn.' },
-  { slug: 'segbroek', name: 'Segbroek', region: 'Den Haag', blurb: 'Segbroek, met wijken als het Regentessekwartier en Vogelwijk, kent veel jaren 30-woningen. Daar zit het leidingwerk vaak anders in elkaar dan in nieuwbouw, en dat vraagt om ervaring.' },
-  { slug: 'escamp', name: 'Escamp', region: 'Den Haag', blurb: 'Escamp omvat wijken als Moerwijk, Bouwlust en Vrederust, met veel naoorlogse woningbouw. Van rijtjeshuis tot flat: Hadi Installatie kent de veelvoorkomende leidingopbouw in deze wijken.' },
-  { slug: 'laak', name: 'Laak', region: 'Den Haag', blurb: 'Laak, met het Laakkwartier en Spoorwijk, is een van de meer industriële stadsdelen van Den Haag, inmiddels volop in ontwikkeling met nieuwbouw naast bestaande woningen.' },
-  { slug: 'haagse-hout', name: 'Haagse Hout', region: 'Den Haag', blurb: 'Haagse Hout, met Benoordenhout en Mariahoeve, kent zowel statige villa\'s als jaren 60-flats. De variatie in bouwjaar betekent ook variatie in het type installatiewerk dat nodig is.' },
-  { slug: 'loosduinen', name: 'Loosduinen', region: 'Den Haag', blurb: 'Loosduinen heeft een dorps karakter, met de duinen dichtbij. Van het oude dorpscentrum tot nieuwere uitbreidingswijken: Hadi Installatie is snel ter plekke.' },
-  { slug: 'voorburg', name: 'Voorburg', region: 'regio Den Haag', blurb: 'Voorburg, met zijn historische lint langs de Vliet, combineert oude panden met nieuwere woonwijken. Hadi Installatie rukt ook hier snel uit vanuit Den Haag.' },
-  { slug: 'rijswijk', name: 'Rijswijk', region: 'regio Den Haag', blurb: 'Van In de Bogaard tot Te Werve: Rijswijk grenst direct aan Den Haag en wordt vanuit Hadi Installatie snel bereikt voor lekkages, installaties en onderhoud.' },
-  { slug: 'leidschendam', name: 'Leidschendam', region: 'regio Den Haag', blurb: 'Leidschendam, met het karakteristieke Damcentrum, kent een mix van historische en moderne woningen. Hadi Installatie is ook hier snel ter plekke.' },
-  { slug: 'wassenaar', name: 'Wassenaar', region: 'regio Den Haag', blurb: 'Wassenaar staat bekend om ruime villa\'s en woningen dicht bij de duinen. Groter leidingwerk en meer sanitair vragen om een vakman die overzicht houdt, ook bij grotere klussen.' },
-  { slug: 'zoetermeer', name: 'Zoetermeer', region: 'regio Den Haag', blurb: 'Zoetermeer groeide in de jaren 70 en 80 snel uit tot een stad met veel gelijksoortige woningbouw. Dat maakt veelvoorkomende storingen vaak herkenbaar en snel op te lossen.' },
-  { slug: 'delft', name: 'Delft', region: 'regio Den Haag', blurb: 'Delft combineert een historische binnenstad met studentenwoningen rond de TU. Van grachtenpand tot studio: Hadi Installatie kent de uiteenlopende bouwstijlen.' },
-  { slug: 'pijnacker-nootdorp', name: 'Pijnacker-Nootdorp', region: 'regio Den Haag', blurb: 'Pijnacker-Nootdorp is grotendeels een Vinex-gemeente met relatief jonge woningen. Nieuwbouw kent andere aandachtspunten dan oudere leidingen, en daar spelen we op in.' },
-  { slug: 'westland', name: 'Westland', region: 'regio Den Haag', blurb: 'Het Westland staat bekend om de glastuinbouw, met woningen die vaak direct grenzen aan bedrijfsruimte of kassen. Hadi Installatie helpt zowel bij particuliere als kleinzakelijke installaties.' },
+  { slug: 'den-haag-centrum', name: 'Den Haag Centrum', region: 'Den Haag', blurb: 'Van het Zeeheldenkwartier tot de Grote Markt: in Den Haag Centrum wonen en werken mensen in een mix van historische panden en moderne appartementen. Smalle straten en oudere leidingen vragen soms om extra vakmanschap.', nearby: ['segbroek', 'haagse-hout', 'laak'] },
+  { slug: 'scheveningen', name: 'Scheveningen', region: 'Den Haag', blurb: 'Scheveningen is de kustplaats van Den Haag, met veel woningen die dicht bij zee staan. Zilte lucht is niet altijd vriendelijk voor leidingwerk en kranen, waardoor onderhoud en tijdige reparatie extra belangrijk zijn.', nearby: ['segbroek', 'den-haag-centrum', 'wassenaar'] },
+  { slug: 'segbroek', name: 'Segbroek', region: 'Den Haag', blurb: 'Segbroek, met wijken als het Regentessekwartier en Vogelwijk, kent veel jaren 30-woningen. Daar zit het leidingwerk vaak anders in elkaar dan in nieuwbouw, en dat vraagt om ervaring.', nearby: ['den-haag-centrum', 'scheveningen', 'loosduinen'] },
+  { slug: 'escamp', name: 'Escamp', region: 'Den Haag', blurb: 'Escamp omvat wijken als Moerwijk, Bouwlust en Vrederust, met veel naoorlogse woningbouw. Van rijtjeshuis tot flat: Hadi Installatie kent de veelvoorkomende leidingopbouw in deze wijken.', nearby: ['laak', 'rijswijk', 'zoetermeer'] },
+  { slug: 'laak', name: 'Laak', region: 'Den Haag', blurb: 'Laak, met het Laakkwartier en Spoorwijk, is een van de meer industriële stadsdelen van Den Haag, inmiddels volop in ontwikkeling met nieuwbouw naast bestaande woningen.', nearby: ['den-haag-centrum', 'escamp', 'rijswijk'] },
+  { slug: 'haagse-hout', name: 'Haagse Hout', region: 'Den Haag', blurb: 'Haagse Hout, met Benoordenhout en Mariahoeve, kent zowel statige villa\'s als jaren 60-flats. De variatie in bouwjaar betekent ook variatie in het type installatiewerk dat nodig is.', nearby: ['den-haag-centrum', 'voorburg', 'wassenaar'] },
+  { slug: 'loosduinen', name: 'Loosduinen', region: 'Den Haag', blurb: 'Loosduinen heeft een dorps karakter, met de duinen dichtbij. Van het oude dorpscentrum tot nieuwere uitbreidingswijken: Hadi Installatie is snel ter plekke.', nearby: ['segbroek', 'westland', 'escamp'] },
+  { slug: 'voorburg', name: 'Voorburg', region: 'regio Den Haag', blurb: 'Voorburg, met zijn historische lint langs de Vliet, combineert oude panden met nieuwere woonwijken. Hadi Installatie rukt ook hier snel uit vanuit Den Haag.', nearby: ['haagse-hout', 'leidschendam', 'rijswijk'] },
+  { slug: 'rijswijk', name: 'Rijswijk', region: 'regio Den Haag', blurb: 'Van In de Bogaard tot Te Werve: Rijswijk grenst direct aan Den Haag en wordt vanuit Hadi Installatie snel bereikt voor lekkages, installaties en onderhoud.', nearby: ['den-haag-centrum', 'delft', 'escamp'] },
+  { slug: 'leidschendam', name: 'Leidschendam', region: 'regio Den Haag', blurb: 'Leidschendam, met het karakteristieke Damcentrum, kent een mix van historische en moderne woningen. Hadi Installatie is ook hier snel ter plekke.', nearby: ['voorburg', 'wassenaar', 'zoetermeer'] },
+  { slug: 'wassenaar', name: 'Wassenaar', region: 'regio Den Haag', blurb: 'Wassenaar staat bekend om ruime villa\'s en woningen dicht bij de duinen. Groter leidingwerk en meer sanitair vragen om een vakman die overzicht houdt, ook bij grotere klussen.', nearby: ['scheveningen', 'haagse-hout', 'leidschendam'] },
+  { slug: 'zoetermeer', name: 'Zoetermeer', region: 'regio Den Haag', blurb: 'Zoetermeer groeide in de jaren 70 en 80 snel uit tot een stad met veel gelijksoortige woningbouw. Dat maakt veelvoorkomende storingen vaak herkenbaar en snel op te lossen.', nearby: ['pijnacker-nootdorp', 'leidschendam', 'escamp'] },
+  { slug: 'delft', name: 'Delft', region: 'regio Den Haag', blurb: 'Delft combineert een historische binnenstad met studentenwoningen rond de TU. Van grachtenpand tot studio: Hadi Installatie kent de uiteenlopende bouwstijlen.', nearby: ['rijswijk', 'pijnacker-nootdorp', 'westland'] },
+  { slug: 'pijnacker-nootdorp', name: 'Pijnacker-Nootdorp', region: 'regio Den Haag', blurb: 'Pijnacker-Nootdorp is grotendeels een Vinex-gemeente met relatief jonge woningen. Nieuwbouw kent andere aandachtspunten dan oudere leidingen, en daar spelen we op in.', nearby: ['delft', 'zoetermeer', 'rijswijk'] },
+  { slug: 'westland', name: 'Westland', region: 'regio Den Haag', blurb: 'Het Westland staat bekend om de glastuinbouw, met woningen die vaak direct grenzen aan bedrijfsruimte of kassen. Hadi Installatie helpt zowel bij particuliere als kleinzakelijke installaties.', nearby: ['loosduinen', 'delft', 'escamp'] },
 ];
 
 /* ============================== SHARED SHELL ============================== */
 
-const FONT_LINK = `<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">`;
+const FONT_LINK = `<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..700&display=swap" rel="stylesheet">`;
 
 const CSS = fs.readFileSync(path.join(ROOT, 'shared.css.txt'), 'utf8');
+
+function breadcrumbLd(items) {
+  return `<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    ${items.map((it, i) => `{"@type":"ListItem","position":${i + 1},"name":${JSON.stringify(it.label)}${it.url ? `,"item":${JSON.stringify(it.url)}` : ''}}`).join(',\n    ')}
+  ]
+}
+</script>`;
+}
+
+function breadcrumbNav(items) {
+  return `<nav class="breadcrumb reveal" aria-label="Kruimelpad">
+  ${items.map((it, i) => it.href
+      ? `<a href="${it.href}">${it.label}</a><span class="crumb-sep">/</span>`
+      : `<span aria-current="page">${it.label}</span>`
+    ).join('\n  ')}
+</nav>`;
+}
 
 function truncate(text, max) {
   if (text.length <= max) return text;
@@ -445,6 +610,7 @@ function nav(prefix) {
     <a href="${prefix}index.html" class="logo"><img src="${prefix}img/logo-nav.png" alt="Hadi Installatie"></a>
     <ul class="nav-links">
       <li><a href="${prefix}index.html#diensten">Diensten</a></li>
+      <li><a href="${prefix}diensten/spoedservice-loodgieter-24-uur.html" class="nav-spoed"><span class="nav-spoed-dot"></span>Spoed</a></li>
       <li><a href="${prefix}index.html#werkgebied">Werkgebied</a></li>
       <li><a href="${prefix}over-ons.html">Over ons</a></li>
       <li><a href="${prefix}index.html#faq">FAQ</a></li>
@@ -457,6 +623,7 @@ function nav(prefix) {
 <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigatiemenu">
   <button class="mobile-close" id="mobileClose" aria-label="Menu sluiten">✕</button>
   <a href="${prefix}index.html#diensten">Diensten</a>
+  <a href="${prefix}diensten/spoedservice-loodgieter-24-uur.html" class="nav-spoed"><span class="nav-spoed-dot"></span>Spoed</a>
   <a href="${prefix}index.html#werkgebied">Werkgebied</a>
   <a href="${prefix}over-ons.html">Over ons</a>
   <a href="${prefix}index.html#faq">FAQ</a>
@@ -578,6 +745,52 @@ const io = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
 },{threshold:.15});
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// water droplet particles (dark sections)
+if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  document.querySelectorAll('canvas.particles').forEach(canvas => {
+    const ctx = canvas.getContext('2d');
+    const section = canvas.closest('section,header');
+    let w, h, drops, running = false, raf;
+    const DENSITY = 9000;
+    function resize() {
+      w = canvas.width = section.offsetWidth;
+      h = canvas.height = section.offsetHeight;
+      const count = Math.max(14, Math.min(46, Math.round((w * h) / DENSITY)));
+      drops = Array.from({ length: count }, makeDrop);
+    }
+    function makeDrop(existing) {
+      return {
+        x: Math.random() * w,
+        y: existing ? h + Math.random() * 40 : Math.random() * h,
+        r: 1 + Math.random() * 2.2,
+        speed: 0.25 + Math.random() * 0.55,
+        drift: (Math.random() - 0.5) * 0.3,
+        alpha: 0.12 + Math.random() * 0.22,
+      };
+    }
+    function tick() {
+      ctx.clearRect(0, 0, w, h);
+      ctx.fillStyle = '#bcd4ff';
+      for (const d of drops) {
+        d.y -= d.speed;
+        d.x += d.drift;
+        if (d.y < -10) Object.assign(d, makeDrop(true), { y: h + 10 });
+        ctx.globalAlpha = d.alpha;
+        ctx.beginPath();
+        ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      ctx.globalAlpha = 1;
+      if (running) raf = requestAnimationFrame(tick);
+    }
+    function start() { if (running) return; running = true; raf = requestAnimationFrame(tick); }
+    function stop() { running = false; if (raf) cancelAnimationFrame(raf); }
+    resize();
+    addEventListener('resize', resize, { passive: true });
+    new IntersectionObserver(([e]) => { e.isIntersecting ? start() : stop(); }, { threshold: 0 }).observe(section);
+  });
+}
 </script>`;
 }
 
@@ -622,7 +835,12 @@ function serviceLd(svc) {
     ${svc.faqs.map(f => `{"@type":"Question","name":${JSON.stringify(f.q)},"acceptedAnswer":{"@type":"Answer","text":${JSON.stringify(f.a)}}}`).join(',\n    ')}
   ]
 }
-</script>`;
+</script>
+${breadcrumbLd([
+  { label: 'Home', url: `${SITE.domain}/` },
+  { label: 'Diensten', url: `${SITE.domain}/index.html#diensten` },
+  { label: svc.nav },
+])}`;
 }
 
 function buildServiceBody(svc) {
@@ -631,6 +849,7 @@ function buildServiceBody(svc) {
 <header class="page-hero">
   <div class="hero-bg"></div>
   <div class="wrap">
+    ${breadcrumbNav([{ label: 'Home', href: `${p}index.html` }, { label: 'Diensten', href: `${p}index.html#diensten` }, { label: svc.nav }])}
     <span class="eyebrow reveal">${svc.eyebrow}</span>
     <h1 class="reveal reveal-d1">${svc.h1}</h1>
     <p class="lead reveal reveal-d2">${svc.lead}</p>
@@ -640,6 +859,27 @@ function buildServiceBody(svc) {
     </div>
   </div>
 </header>
+
+<!-- OVER DEZE DIENST -->
+<section class="band-2">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Achtergrond</span>
+      <h2>${svc.about.title}</h2>
+    </div>
+    <div class="about-info-grid">
+      <div class="reveal reveal-d1">
+        ${svc.about.paragraphs.map(par => `<p>${par}</p>`).join('\n        ')}
+      </div>
+      <div class="signals-card reveal reveal-d2">
+        <h4>Herkent u dit?</h4>
+        <ul class="signals-list">
+          ${svc.about.signals.map(s => `<li>${s}</li>`).join('\n          ')}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- WAT U KRIJGT -->
 <section>
@@ -696,7 +936,24 @@ function buildServiceBody(svc) {
         <img class="ph-img" src="${p}img/${img.src}" alt="${img.alt}" loading="lazy" width="1000" height="667">
       </div>`).join('\n      ')}
     </div>
-    <p class="photo-note reveal">Ter illustratie: foto's van vergelijkbaar installatiewerk.</p>
+  </div>
+</section>
+
+<!-- GERELATEERDE DIENSTEN -->
+<section class="band-2">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Ook interessant</span>
+      <h2>Gerelateerde <span class="serif-i">diensten</span></h2>
+    </div>
+    <div class="related-grid">
+      ${svc.related.map(slug => {
+        const rel = SERVICES.find(s => s.slug === slug);
+        return `<a href="${p}diensten/${rel.slug}.html" class="related-card reveal">
+        <span>${rel.nav}</span><span class="arrow">→</span>
+      </a>`;
+      }).join('\n      ')}
+    </div>
   </div>
 </section>
 
@@ -718,6 +975,7 @@ function buildServiceBody(svc) {
 
 <!-- CTA -->
 <section id="contact" class="cta-final night">
+  <canvas class="particles" data-particles="droplet"></canvas>
   <div class="wrap">
     <span class="eyebrow reveal">Direct geholpen worden</span>
     <h2 class="reveal reveal-d1">${svc.h1}? <span class="serif-i">Bel gerust.</span></h2>
@@ -743,16 +1001,22 @@ function locationLd(area) {
   "address": { "@type": "PostalAddress", "postalCode": "${SITE.postcode}", "addressLocality": "${SITE.city}", "addressCountry": "NL" },
   "url": "${SITE.domain}/locaties/${area.slug}.html"
 }
-</script>`;
+</script>
+${breadcrumbLd([
+  { label: 'Home', url: `${SITE.domain}/` },
+  { label: 'Werkgebied', url: `${SITE.domain}/index.html#werkgebied` },
+  { label: area.name },
+])}`;
 }
 
 function buildLocationBody(area) {
   const p = '../';
-  const featured = SERVICES.slice(0, 4);
+  const featured = SERVICES;
   return `<!-- PAGE HERO -->
 <header class="page-hero">
   <div class="hero-bg"></div>
   <div class="wrap">
+    ${breadcrumbNav([{ label: 'Home', href: `${p}index.html` }, { label: 'Werkgebied', href: `${p}index.html#werkgebied` }, { label: area.name }])}
     <span class="eyebrow reveal">Loodgieter · ${area.name}</span>
     <h1 class="reveal reveal-d1">Loodgieter in <span class="serif-i">${area.name}</span></h1>
     <p class="lead reveal reveal-d2">${area.blurb}</p>
@@ -789,13 +1053,29 @@ function buildLocationBody(area) {
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Waarom wij</span>
-      <h2>Waarom ${area.name} voor <span class="serif-i">Hadi</span> kiest</h2>
+      <h2>Waarom ${area.name} voor <span class="serif-i">${SITE.ownerName}</span> kiest</h2>
     </div>
     <div class="stat-row reveal" style="margin-top:48px;border:1px solid var(--line);border-radius:var(--radius);background:var(--card);box-shadow:var(--shadow)">
       <div class="stat-col"><div class="num">&lt;2u</div><h3>Reactietijd bij spoed</h3><p>Ook in ${area.name} vaak binnen twee uur voor de deur.</p></div>
       <div class="stat-col"><div class="num">100%</div><h3>Vaste prijs vooraf</h3><p>Geen verrassingen achteraf, ook niet bij grotere klussen.</p></div>
       <div class="stat-col"><div class="num">KVK</div><h3>Geregistreerd vakbedrijf</h3><p>Officieel ingeschreven onder KVK ${SITE.kvk}.</p></div>
       <div class="stat-col"><div class="num">15+</div><h3>Wijken &amp; gemeenten</h3><p>Actief in heel Den Haag en de regio.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- NABIJGELEGEN PLAATSEN -->
+<section class="band-2">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Ook in de buurt</span>
+      <h2>Nabij <span class="serif-i">${area.name}</span></h2>
+    </div>
+    <div class="nearby-list reveal">
+      ${area.nearby.map(slug => {
+        const n = AREAS.find(a => a.slug === slug);
+        return `<a href="${p}locaties/${n.slug}.html" class="related-card" style="padding:14px 22px"><span>${n.name}</span></a>`;
+      }).join('\n      ')}
     </div>
   </div>
 </section>
@@ -826,6 +1106,7 @@ function buildLocationBody(area) {
 
 <!-- CTA -->
 <section id="contact" class="cta-final night">
+  <canvas class="particles" data-particles="droplet"></canvas>
   <div class="wrap">
     <span class="eyebrow reveal">Direct geholpen worden</span>
     <h2 class="reveal reveal-d1">Loodgieter nodig in <span class="serif-i">${area.name}</span>?</h2>
@@ -879,6 +1160,7 @@ function buildHomeBody() {
   return `<!-- HERO -->
 <header class="hero night">
   <div class="hero-bg"></div>
+  <canvas class="particles" data-particles="droplet"></canvas>
   <div class="wrap hero-grid">
     <div>
       <span class="eyebrow reveal">Loodgieter · Den Haag e.o.</span>
@@ -978,13 +1260,13 @@ function buildHomeBody() {
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Waarom wij</span>
-      <h2>Waarom Den Haag voor <span class="serif-i">Hadi</span> kiest</h2>
+      <h2>Waarom Den Haag voor <span class="serif-i">${SITE.ownerName}</span> kiest</h2>
       <p>Mooie beloftes maakt iedereen. Dit is wat wij anders doen.</p>
     </div>
     <div class="icon-list">
       <div class="icon-list-item reveal">
         <span class="icon-badge-solid">${ICONS.phoneCall}</span>
-        <div><h3>Rechtstreeks contact met Hadi</h3><p>Geen callcenter, geen keuzemenu. U spreekt direct de vakman die ook langskomt.</p></div>
+        <div><h3>Rechtstreeks contact met ${SITE.ownerName}</h3><p>Geen callcenter, geen keuzemenu. U spreekt direct de vakman die ook langskomt.</p></div>
       </div>
       <div class="icon-list-item reveal reveal-d1">
         <span class="icon-badge-solid">${ICONS.checkCircle}</span>
@@ -992,7 +1274,7 @@ function buildHomeBody() {
       </div>
       <div class="icon-list-item reveal reveal-d2">
         <span class="icon-badge-solid">${ICONS.clock}</span>
-        <div><h3>Snel ter plekke bij spoed</h3><p>Lekkage of geen warm water? Vaak binnen twee uur staat Hadi voor de deur.</p></div>
+        <div><h3>Snel ter plekke bij spoed</h3><p>Lekkage of geen warm water? Vaak binnen twee uur staat ${SITE.ownerName} voor de deur.</p></div>
       </div>
       <div class="icon-list-item reveal reveal-d3">
         <span class="icon-badge-solid">${ICONS.mapPin}</span>
@@ -1056,7 +1338,6 @@ function buildHomeBody() {
         </div>
       </a>
     </div>
-    <p class="photo-note reveal">Ter illustratie: foto's van vergelijkbaar installatiewerk. Zodra Hadi Installatie eigen projectfoto's aanlevert, vervangen we deze.</p>
   </div>
 </section>
 
@@ -1079,15 +1360,15 @@ function buildHomeBody() {
   <div class="wrap">
     <div class="about-grid">
       <div class="about-photo reveal">
-        <span>Hier komt een echte foto van Hadi aan het werk</span>
+        <span>Hier komt een echte foto van ${SITE.ownerName} aan het werk</span>
       </div>
       <div class="about-copy">
-        <span class="eyebrow reveal">Wie is Hadi</span>
+        <span class="eyebrow reveal">Wie is ${SITE.ownerName}</span>
         <h2 class="reveal reveal-d1">Eén vakman, <span class="serif-i">rechtstreeks</span> aan de lijn</h2>
-        <p class="reveal reveal-d2">Hadi Installatie is het eigen bedrijf van Hadi, opgericht in Den Haag. Geen callcenter, geen wisselende monteurs: als u belt, spreekt u degene die ook daadwerkelijk langskomt en het werk uitvoert.</p>
+        <p class="reveal reveal-d2">Hadi Installatie is het eigen bedrijf van ${SITE.ownerName}, opgericht in Den Haag. Geen callcenter, geen wisselende monteurs: als u belt, spreekt u degene die ook daadwerkelijk langskomt en het werk uitvoert.</p>
         <p class="reveal reveal-d2">Van een druppende kraan tot een complete CV-installatie: elke klus wordt met dezelfde aandacht en dezelfde eerlijke prijsafspraak aangepakt.</p>
         <ul class="usp-list reveal reveal-d3">
-          <li><div><b>Eigen vakman, geen onderaannemers</b><span>U heeft altijd met Hadi zelf te maken, van intake tot oplevering.</span></div></li>
+          <li><div><b>Eigen vakman, geen onderaannemers</b><span>U heeft altijd met ${SITE.ownerName} zelf te maken, van intake tot oplevering.</span></div></li>
           <li><div><b>Rechtstreeks nummer</b><span>Geen wachtrij of keuzemenu, gewoon direct contact.</span></div></li>
           <li><div><b>Lokaal in Den Haag</b><span>Kent de wijken en is daardoor snel ter plekke.</span></div></li>
         </ul>
@@ -1154,6 +1435,7 @@ function buildHomeBody() {
 
 <!-- CTA -->
 <section id="contact" class="cta-final night">
+  <canvas class="particles" data-particles="droplet"></canvas>
   <div class="wrap">
     <span class="eyebrow reveal">Direct geholpen worden</span>
     <h2 class="reveal reveal-d1">Lekkage, storing of <span class="serif-i">verstopping</span>?</h2>
@@ -1184,6 +1466,7 @@ function buildAfspraakBody() {
   return `<!-- PAGE HERO -->
 <header class="page-hero" style="padding-bottom:40px">
   <div class="wrap">
+    ${breadcrumbNav([{ label: 'Home', href: 'index.html' }, { label: 'Afspraak maken' }])}
     <span class="eyebrow reveal">Gratis &amp; vrijblijvend</span>
     <h1 class="reveal reveal-d1">Plan uw <span class="serif-i">afspraak</span></h1>
     <p class="lead reveal reveal-d2">Vertel ons kort wat er speelt. Bij spoed belt u ons liever direct, voor regulier werk plannen we via dit formulier binnen 24 uur een moment in.</p>
@@ -1265,8 +1548,9 @@ function buildOverOnsBody() {
   return `<!-- PAGE HERO -->
 <header class="page-hero">
   <div class="wrap">
+    ${breadcrumbNav([{ label: 'Home', href: 'index.html' }, { label: 'Over ons' }])}
     <span class="eyebrow reveal">Over ons</span>
-    <h1 class="reveal reveal-d1">Wie is <span class="serif-i">Hadi</span></h1>
+    <h1 class="reveal reveal-d1">Wie is <span class="serif-i">${SITE.ownerName}</span></h1>
     <p class="lead reveal reveal-d2">Eén vakman, rechtstreeks aan de lijn. Geen callcenter, geen wisselende monteurs.</p>
   </div>
 </header>
@@ -1275,15 +1559,15 @@ function buildOverOnsBody() {
   <div class="wrap">
     <div class="about-grid">
       <div class="about-photo reveal">
-        <span>Hier komt een echte foto van Hadi aan het werk</span>
+        <span>Hier komt een echte foto van ${SITE.ownerName} aan het werk</span>
       </div>
       <div class="about-copy">
         <span class="eyebrow reveal">Het verhaal</span>
         <h2 class="reveal reveal-d1">Vakwerk, <span class="serif-i">geen omwegen</span></h2>
-        <p class="reveal reveal-d2">Hadi Installatie is het eigen bedrijf van Hadi, opgericht in Den Haag en geregistreerd onder KVK ${SITE.kvk}. Geen callcenter, geen wisselende monteurs: als u belt, spreekt u degene die ook daadwerkelijk langskomt en het werk uitvoert.</p>
+        <p class="reveal reveal-d2">Hadi Installatie is het eigen bedrijf van ${SITE.ownerName}, opgericht in Den Haag en geregistreerd onder KVK ${SITE.kvk}. Geen callcenter, geen wisselende monteurs: als u belt, spreekt u degene die ook daadwerkelijk langskomt en het werk uitvoert.</p>
         <p class="reveal reveal-d2">Van een druppende kraan tot een complete CV-installatie: elke klus wordt met dezelfde aandacht en dezelfde eerlijke prijsafspraak aangepakt. Hadi Installatie is een jong bedrijf, dat betekent scherp op prijs, flexibel in planning en gemotiveerd om het bij elke klus goed te doen.</p>
         <ul class="usp-list reveal reveal-d3">
-          <li><div><b>Eigen vakman, geen onderaannemers</b><span>U heeft altijd met Hadi zelf te maken, van intake tot oplevering.</span></div></li>
+          <li><div><b>Eigen vakman, geen onderaannemers</b><span>U heeft altijd met ${SITE.ownerName} zelf te maken, van intake tot oplevering.</span></div></li>
           <li><div><b>Rechtstreeks nummer</b><span>Geen wachtrij of keuzemenu, gewoon direct contact.</span></div></li>
           <li><div><b>Lokaal in Den Haag</b><span>Kent de wijken en is daardoor snel ter plekke.</span></div></li>
         </ul>
@@ -1306,6 +1590,7 @@ function buildOverOnsBody() {
 
 <!-- CTA -->
 <section id="contact" class="cta-final night">
+  <canvas class="particles" data-particles="droplet"></canvas>
   <div class="wrap">
     <span class="eyebrow reveal">Maak kennis</span>
     <h2 class="reveal reveal-d1">Even <span class="serif-i">bellen</span>?</h2>
@@ -1324,6 +1609,7 @@ function buildPrivacyBody() {
   return `<!-- PAGE HERO -->
 <header class="page-hero" style="padding-bottom:20px">
   <div class="wrap">
+    ${breadcrumbNav([{ label: 'Home', href: 'index.html' }, { label: 'Privacyverklaring' }])}
     <span class="eyebrow reveal">Juridisch</span>
     <h1 class="reveal reveal-d1">Privacy<span class="serif-i">verklaring</span></h1>
     <p class="lead reveal reveal-d2">Laatst bijgewerkt: 2026. Hadi Installatie gaat zorgvuldig om met uw persoonsgegevens.</p>

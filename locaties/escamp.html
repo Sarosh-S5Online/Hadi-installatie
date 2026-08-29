@@ -15,7 +15,7 @@
 <link rel="apple-touch-icon" href="../img/favicon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..700&display=swap" rel="stylesheet">
 <!-- GTM: paste container snippet here -->
 <script type="application/ld+json">
 {
@@ -28,7 +28,23 @@
   "url": "https://hadi-installatie.nl/locaties/escamp.html"
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://hadi-installatie.nl/"},
+    {"@type":"ListItem","position":2,"name":"Werkgebied","item":"https://hadi-installatie.nl/index.html#werkgebied"},
+    {"@type":"ListItem","position":3,"name":"Escamp"}
+  ]
+}
+</script>
 <style>
+@font-face{font-family:'Roboto';src:url('/fonts/Roboto-Regular.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Roboto';src:url('/fonts/Roboto-Medium.ttf') format('truetype');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Roboto';src:url('/fonts/Roboto-SemiBold.ttf') format('truetype');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'Roboto';src:url('/fonts/Roboto-Bold.ttf') format('truetype');font-weight:700;font-style:normal;font-display:swap}
+
 :root{
   --bg:#f7f9fc;
   --bg-2:#eef2fb;
@@ -49,7 +65,7 @@ html{scroll-behavior:smooth}
 body{
   background:var(--bg);
   color:var(--ink);
-  font-family:'Inter',system-ui,sans-serif;
+  font-family:'Roboto',system-ui,sans-serif;
   font-size:18px;
   line-height:1.65;
   overflow-x:hidden;
@@ -94,6 +110,12 @@ nav.scrolled{background:rgba(247,249,252,.86);backdrop-filter:blur(14px);padding
 .nav-links{display:flex;gap:30px;align-items:center;list-style:none}
 .nav-links a{color:#3d4a63;text-decoration:none;font-size:15px;font-weight:500;transition:color .25s}
 .nav-links a:hover{color:var(--ink)}
+.nav-spoed{display:flex;align-items:center;gap:7px;color:#d64545!important;font-weight:700!important}
+.nav-spoed:hover{color:#b5342f!important}
+.nav-spoed-dot{width:7px;height:7px;border-radius:50%;background:#e0453f;flex-shrink:0;animation:pulse-dot 1.8s ease-in-out infinite}
+@keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(.7)}}
+@media(prefers-reduced-motion:reduce){.nav-spoed-dot{animation:none}}
+.mobile-menu a.nav-spoed{color:#ff6b63!important;display:flex;align-items:center;gap:10px}
 .nav-links a.btn{color:#fff}
 .btn{
   display:inline-block;background-color:var(--accent-deep);background-image:linear-gradient(135deg,var(--accent-2),var(--accent-deep));color:#fff;
@@ -121,7 +143,7 @@ nav.scrolled{background:rgba(247,249,252,.86);backdrop-filter:blur(14px);padding
   padding:12px 24px;transition:color .25s;
 }
 .mobile-menu a:hover{color:var(--accent-2)}
-.mobile-menu .btn{font-family:'Inter',sans-serif;font-size:17px;margin-top:20px}
+.mobile-menu .btn{font-family:'Roboto',sans-serif;font-size:17px;margin-top:20px}
 .mobile-close{
   position:absolute;top:22px;right:26px;background:none;border:1px solid rgba(238,243,251,.2);
   border-radius:12px;color:#eef3fb;font-size:20px;cursor:pointer;padding:8px 15px;line-height:1;
@@ -130,6 +152,10 @@ nav.scrolled{background:rgba(247,249,252,.86);backdrop-filter:blur(14px);padding
   .nav-links{display:none}
   .hamburger{display:block}
 }
+
+/* ---------- particles (droplets, dark sections) ---------- */
+canvas.particles{position:absolute;inset:0;z-index:0;pointer-events:none}
+@media(prefers-reduced-motion:reduce){canvas.particles{display:none}}
 
 /* ---------- hero (home) ---------- */
 .hero{
@@ -162,6 +188,33 @@ nav.scrolled{background:rgba(247,249,252,.86);backdrop-filter:blur(14px);padding
 .hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(7,17,33,.5),transparent 45%)}
 @media(max-width:980px){.hero-photo{aspect-ratio:16/10;max-width:520px;margin:0 auto}}
 
+/* ---------- breadcrumb ---------- */
+.breadcrumb{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:13.5px;color:var(--ink-dim);margin-bottom:22px}
+.breadcrumb a{color:var(--ink-dim);text-decoration:none;transition:color .2s}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb .crumb-sep{color:var(--line);opacity:.9}
+.breadcrumb [aria-current]{color:var(--ink);font-weight:600}
+.night .breadcrumb a{color:var(--ink-dim)}
+.night .breadcrumb [aria-current]{color:var(--ink)}
+
+/* ---------- about / uitleg sectie ---------- */
+.about-info-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:44px;align-items:start;margin-top:44px}
+@media(max-width:860px){.about-info-grid{grid-template-columns:1fr}}
+.about-info-grid p{color:var(--ink-dim);margin-bottom:16px;font-size:16.5px}
+.signals-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px;box-shadow:var(--shadow)}
+.signals-card h4{font-family:'Fraunces',serif;font-size:19px;margin-bottom:18px;font-weight:600}
+.signals-list{list-style:none;display:grid;gap:14px}
+.signals-list li{display:flex;gap:12px;align-items:flex-start;color:var(--ink);font-size:15.5px}
+.signals-list li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent);flex-shrink:0;margin-top:6px}
+
+/* ---------- related / grid links ---------- */
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
+@media(max-width:800px){.related-grid{grid-template-columns:1fr}}
+.related-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 24px;text-decoration:none;color:inherit;display:flex;align-items:center;justify-content:space-between;gap:12px;transition:transform .25s,box-shadow .25s;box-shadow:var(--shadow)}
+.related-card:hover{transform:translateY(-4px);box-shadow:0 20px 44px rgba(15,26,46,.14)}
+.related-card span.arrow{color:var(--accent);flex-shrink:0;font-size:18px}
+.nearby-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+
 /* ---------- page-hero (subpages) ---------- */
 .page-hero{
   position:relative;padding:150px 0 90px;overflow:hidden;
@@ -181,7 +234,7 @@ nav.scrolled{background:rgba(247,249,252,.86);backdrop-filter:blur(14px);padding
 @media(max-width:900px){.stat-col:nth-child(2n){border-right:none}}
 @media(max-width:560px){.stat-row{grid-template-columns:1fr}.stat-col{border-right:none!important;border-bottom:1px solid var(--line)}.stat-col:last-child{border-bottom:none}}
 .stat-col .num{font-family:'Fraunces',serif;font-weight:700;font-size:44px;color:var(--accent);line-height:1;margin-bottom:14px}
-.stat-col h3{font-size:17px;margin-bottom:6px;font-family:'Inter',sans-serif;font-weight:700}
+.stat-col h3{font-size:17px;margin-bottom:6px;font-family:'Roboto',sans-serif;font-weight:700}
 .stat-col p{color:var(--ink-dim);font-size:14.5px}
 
 /* ---------- pain points (herkenbaar) ---------- */
@@ -191,7 +244,7 @@ nav.scrolled{background:rgba(247,249,252,.86);backdrop-filter:blur(14px);padding
   width:52px;height:52px;border-radius:16px;background:var(--bg-2);
   display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;
 }
-.pain-item h3{font-size:20px;margin-bottom:8px;font-family:'Inter',sans-serif;font-weight:700}
+.pain-item h3{font-size:20px;margin-bottom:8px;font-family:'Roboto',sans-serif;font-weight:700}
 .pain-item p{color:var(--ink-dim);font-size:16px}
 
 /* ---------- statement band (dark, centered) ---------- */
@@ -245,7 +298,7 @@ nav.scrolled{background:rgba(247,249,252,.86);backdrop-filter:blur(14px);padding
   background:linear-gradient(135deg,var(--accent-2),var(--accent-deep));color:#fff;
   display:flex;align-items:center;justify-content:center;
 }
-.icon-list-item h3{font-size:19px;margin-bottom:6px;font-family:'Inter',sans-serif;font-weight:700}
+.icon-list-item h3{font-size:19px;margin-bottom:6px;font-family:'Roboto',sans-serif;font-weight:700}
 .icon-list-item p{color:var(--ink-dim);font-size:16px}
 
 /* ---------- werkwijze (stacked steps) ---------- */
@@ -328,12 +381,12 @@ nav.scrolled{background:rgba(247,249,252,.86);backdrop-filter:blur(14px);padding
 .faq-item{border:1px solid var(--line);border-radius:16px;background:var(--card);margin-bottom:14px;box-shadow:var(--shadow)}
 .faq-q{
   width:100%;background:none;border:none;color:var(--ink);cursor:pointer;
-  font-family:'Inter',sans-serif;font-size:17px;font-weight:700;text-align:left;
+  font-family:'Roboto',sans-serif;font-size:17px;font-weight:700;text-align:left;
   padding:22px 50px 22px 24px;position:relative;line-height:1.35;
 }
 .faq-q::after{
   content:"+";position:absolute;right:20px;top:50%;transform:translateY(-50%);
-  color:var(--accent);font-size:24px;font-family:'Inter',sans-serif;font-weight:400;
+  color:var(--accent);font-size:24px;font-family:'Roboto',sans-serif;font-weight:400;
   transition:transform .3s ease;
 }
 .faq-item.open .faq-q::after{transform:translateY(-50%) rotate(45deg)}
@@ -348,7 +401,7 @@ nav.scrolled{background:rgba(247,249,252,.86);backdrop-filter:blur(14px);padding
   width:44px;height:44px;border-radius:50%;background:var(--bg-2);color:var(--accent);
   display:flex;align-items:center;justify-content:center;margin-bottom:18px;
 }
-.review h3{font-size:18px;margin-bottom:10px;font-family:'Inter',sans-serif;font-weight:700}
+.review h3{font-size:18px;margin-bottom:10px;font-family:'Roboto',sans-serif;font-weight:700}
 .review p{color:var(--ink-dim);font-size:15.5px}
 
 /* ---------- cta ---------- */
@@ -368,7 +421,7 @@ footer{border-top:1px solid var(--line);padding:52px 0 36px;font-size:15px;color
 .foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
 @media(max-width:900px){.foot-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.foot-grid{grid-template-columns:1fr}}
-footer h4{font-family:'Inter',sans-serif;color:var(--ink);font-size:15px;margin-bottom:14px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+footer h4{font-family:'Roboto',sans-serif;color:var(--ink);font-size:15px;margin-bottom:14px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
 footer a{color:var(--ink-dim);text-decoration:none}
 footer a:hover{color:var(--accent)}
 footer ul{list-style:none}
@@ -462,6 +515,7 @@ footer .foot-logo{height:32px;width:auto;margin-bottom:14px;display:block}
     <a href="../index.html" class="logo"><img src="../img/logo-nav.png" alt="Hadi Installatie"></a>
     <ul class="nav-links">
       <li><a href="../index.html#diensten">Diensten</a></li>
+      <li><a href="../diensten/spoedservice-loodgieter-24-uur.html" class="nav-spoed"><span class="nav-spoed-dot"></span>Spoed</a></li>
       <li><a href="../index.html#werkgebied">Werkgebied</a></li>
       <li><a href="../over-ons.html">Over ons</a></li>
       <li><a href="../index.html#faq">FAQ</a></li>
@@ -474,6 +528,7 @@ footer .foot-logo{height:32px;width:auto;margin-bottom:14px;display:block}
 <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigatiemenu">
   <button class="mobile-close" id="mobileClose" aria-label="Menu sluiten">✕</button>
   <a href="../index.html#diensten">Diensten</a>
+  <a href="../diensten/spoedservice-loodgieter-24-uur.html" class="nav-spoed"><span class="nav-spoed-dot"></span>Spoed</a>
   <a href="../index.html#werkgebied">Werkgebied</a>
   <a href="../over-ons.html">Over ons</a>
   <a href="../index.html#faq">FAQ</a>
@@ -484,6 +539,11 @@ footer .foot-logo{height:32px;width:auto;margin-bottom:14px;display:block}
 <header class="page-hero">
   <div class="hero-bg"></div>
   <div class="wrap">
+    <nav class="breadcrumb reveal" aria-label="Kruimelpad">
+  <a href="../index.html">Home</a><span class="crumb-sep">/</span>
+  <a href="../index.html#werkgebied">Werkgebied</a><span class="crumb-sep">/</span>
+  <span aria-current="page">Escamp</span>
+</nav>
     <span class="eyebrow reveal">Loodgieter · Escamp</span>
     <h1 class="reveal reveal-d1">Loodgieter in <span class="serif-i">Escamp</span></h1>
     <p class="lead reveal reveal-d2">Escamp omvat wijken als Moerwijk, Bouwlust en Vrederust, met veel naoorlogse woningbouw. Van rijtjeshuis tot flat: Hadi Installatie kent de veelvoorkomende leidingopbouw in deze wijken.</p>
@@ -523,6 +583,34 @@ footer .foot-logo{height:32px;width:auto;margin-bottom:14px;display:block}
         <span class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M5 12V6a1 1 0 011-1h2M12 5v3M3 12a9 6 0 0018 0"/><path d="M8 18a4 4 0 008 0"/></svg></span>
         <h3>Badkamer & sanitair</h3>
       </a>
+      <a href="../diensten/kraan-reparatie-en-vervanging.html" class="card reveal reveal-d4">
+        <span class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a4 4 0 00-5.6 5l-6.1 6a2 2 0 002.7 2.7l6-6.1a4 4 0 005-5.6l-2.5 2.5-2.6-.6-.6-2.6 2.5-2.5z"/></svg></span>
+        <h3>Kraan reparatie</h3>
+      </a>
+      <a href="../diensten/waterleiding-aanleg-en-renovatie.html" class="card reveal reveal-d5">
+        <span class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h9a4 4 0 014 4v4"/><circle cx="19" cy="18" r="2.2"/><circle cx="5" cy="6" r="2.2"/></svg></span>
+        <h3>Waterleiding</h3>
+      </a>
+      <a href="../diensten/riolering-en-rioolontstopping.html" class="card reveal reveal-d6">
+        <span class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h10"/></svg></span>
+        <h3>Riolering</h3>
+      </a>
+      <a href="../diensten/spoedservice-loodgieter-24-uur.html" class="card reveal reveal-d7">
+        <span class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg></span>
+        <h3>Spoedservice</h3>
+      </a>
+      <a href="../diensten/boiler-en-warmwatertoestel.html" class="card reveal reveal-d8">
+        <span class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></span>
+        <h3>Boiler & warmwater</h3>
+      </a>
+      <a href="../diensten/keukeninstallatie.html" class="card reveal reveal-d9">
+        <span class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16M6 4v16M18 4v16M4 14h6M14 14h6"/></svg></span>
+        <h3>Keukeninstallatie</h3>
+      </a>
+      <a href="../diensten/gasleiding-en-gasfitter.html" class="card reveal reveal-d10">
+        <span class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9 9l6 6M15 9l-6 6"/></svg></span>
+        <h3>Gasleiding</h3>
+      </a>
     </div>
   </div>
 </section>
@@ -532,13 +620,28 @@ footer .foot-logo{height:32px;width:auto;margin-bottom:14px;display:block}
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Waarom wij</span>
-      <h2>Waarom Escamp voor <span class="serif-i">Hadi</span> kiest</h2>
+      <h2>Waarom Escamp voor <span class="serif-i">Elhadi</span> kiest</h2>
     </div>
     <div class="stat-row reveal" style="margin-top:48px;border:1px solid var(--line);border-radius:var(--radius);background:var(--card);box-shadow:var(--shadow)">
       <div class="stat-col"><div class="num">&lt;2u</div><h3>Reactietijd bij spoed</h3><p>Ook in Escamp vaak binnen twee uur voor de deur.</p></div>
       <div class="stat-col"><div class="num">100%</div><h3>Vaste prijs vooraf</h3><p>Geen verrassingen achteraf, ook niet bij grotere klussen.</p></div>
       <div class="stat-col"><div class="num">KVK</div><h3>Geregistreerd vakbedrijf</h3><p>Officieel ingeschreven onder KVK 68490925.</p></div>
       <div class="stat-col"><div class="num">15+</div><h3>Wijken &amp; gemeenten</h3><p>Actief in heel Den Haag en de regio.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- NABIJGELEGEN PLAATSEN -->
+<section class="band-2">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Ook in de buurt</span>
+      <h2>Nabij <span class="serif-i">Escamp</span></h2>
+    </div>
+    <div class="nearby-list reveal">
+      <a href="../locaties/laak.html" class="related-card" style="padding:14px 22px"><span>Laak</span></a>
+      <a href="../locaties/rijswijk.html" class="related-card" style="padding:14px 22px"><span>Rijswijk</span></a>
+      <a href="../locaties/zoetermeer.html" class="related-card" style="padding:14px 22px"><span>Zoetermeer</span></a>
     </div>
   </div>
 </section>
@@ -569,6 +672,7 @@ footer .foot-logo{height:32px;width:auto;margin-bottom:14px;display:block}
 
 <!-- CTA -->
 <section id="contact" class="cta-final night">
+  <canvas class="particles" data-particles="droplet"></canvas>
   <div class="wrap">
     <span class="eyebrow reveal">Direct geholpen worden</span>
     <h2 class="reveal reveal-d1">Loodgieter nodig in <span class="serif-i">Escamp</span>?</h2>
@@ -698,6 +802,52 @@ const io = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
 },{threshold:.15});
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// water droplet particles (dark sections)
+if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  document.querySelectorAll('canvas.particles').forEach(canvas => {
+    const ctx = canvas.getContext('2d');
+    const section = canvas.closest('section,header');
+    let w, h, drops, running = false, raf;
+    const DENSITY = 9000;
+    function resize() {
+      w = canvas.width = section.offsetWidth;
+      h = canvas.height = section.offsetHeight;
+      const count = Math.max(14, Math.min(46, Math.round((w * h) / DENSITY)));
+      drops = Array.from({ length: count }, makeDrop);
+    }
+    function makeDrop(existing) {
+      return {
+        x: Math.random() * w,
+        y: existing ? h + Math.random() * 40 : Math.random() * h,
+        r: 1 + Math.random() * 2.2,
+        speed: 0.25 + Math.random() * 0.55,
+        drift: (Math.random() - 0.5) * 0.3,
+        alpha: 0.12 + Math.random() * 0.22,
+      };
+    }
+    function tick() {
+      ctx.clearRect(0, 0, w, h);
+      ctx.fillStyle = '#bcd4ff';
+      for (const d of drops) {
+        d.y -= d.speed;
+        d.x += d.drift;
+        if (d.y < -10) Object.assign(d, makeDrop(true), { y: h + 10 });
+        ctx.globalAlpha = d.alpha;
+        ctx.beginPath();
+        ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      ctx.globalAlpha = 1;
+      if (running) raf = requestAnimationFrame(tick);
+    }
+    function start() { if (running) return; running = true; raf = requestAnimationFrame(tick); }
+    function stop() { running = false; if (raf) cancelAnimationFrame(raf); }
+    resize();
+    addEventListener('resize', resize, { passive: true });
+    new IntersectionObserver(([e]) => { e.isIntersecting ? start() : stop(); }, { threshold: 0 }).observe(section);
+  });
+}
 </script>
 </body>
 </html>

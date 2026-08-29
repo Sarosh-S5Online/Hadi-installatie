@@ -16,8 +16,9 @@ const outName = process.argv[3] || 'snapshot';
     style.textContent = '.reveal{transition:none!important}';
     document.head.appendChild(style);
     document.querySelectorAll('.reveal').forEach(e => e.classList.add('in'));
+    document.querySelectorAll('img[loading="lazy"]').forEach(img => img.loading = 'eager');
   });
-  await new Promise(r => setTimeout(r, 200));
+  await new Promise(r => setTimeout(r, 800));
   await page.screenshot({ path: path.join('verify-out', `${outName}-desktop.png`), fullPage: true });
 
   await page.setViewport({ width: 390, height: 844, deviceScaleFactor: 1 });

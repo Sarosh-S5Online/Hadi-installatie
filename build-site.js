@@ -522,8 +522,6 @@ const AREAS = [
 
 /* ============================== SHARED SHELL ============================== */
 
-const FONT_LINK = `<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..700&display=swap" rel="stylesheet">`;
-
 const CSS = fs.readFileSync(path.join(ROOT, 'shared.css.txt'), 'utf8');
 
 function breadcrumbLd(items) {
@@ -593,9 +591,6 @@ function head({ title, description, canonicalPath, prefix, extraLd }) {
 <link rel="icon" type="image/png" sizes="32x32" href="${prefix}img/favicon-32.png">
 <link rel="icon" type="image/png" sizes="96x96" href="${prefix}img/favicon-96.png">
 <link rel="apple-touch-icon" href="${prefix}img/favicon-192.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-${FONT_LINK}
 <!-- GTM: paste container snippet here -->
 ${extraLd || ''}
 <style>

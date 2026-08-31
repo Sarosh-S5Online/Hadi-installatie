@@ -599,7 +599,7 @@ ${FONT_LINK}
 <!-- GTM: paste container snippet here -->
 ${extraLd || ''}
 <style>
-${CSS}
+${CSS.replace(/\{\{FONTS\}\}/g, `${prefix}fonts/`)}
 </style>
 </head>`;
 }
